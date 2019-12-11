@@ -1,18 +1,9 @@
 body { background: gray; }
 
-svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.spin {
-  animation: rotate 3s infinite;
+/* .spin {
+  animation: rotate 3s;
   transform-origin: 50%;
-}
+} */
 
 @keyframes rotate {
   from {
