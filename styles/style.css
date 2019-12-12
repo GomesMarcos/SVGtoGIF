@@ -1,9 +1,9 @@
 body { background: gray; }
 
-/* .spin {
+.spin {
   animation: rotate 3s;
   transform-origin: 50%;
-} */
+}
 
 @keyframes rotate {
   from {

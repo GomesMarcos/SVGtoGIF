@@ -76,17 +76,23 @@
   <script>
     const duration = 3000;
     const fps = 30;
-    const spin = document.querySelector('.spin')[0];
-    const rotationDegree = 360 / duration;
+    let rotationDegree = 0;
 
-    for (let index = 0; index < duration; index+=fps) {
-      spin.css
-      setTimeout(
-        html2canvas(document.querySelector("#source")).then(canvas => {
-          document.querySelector("#result").appendChild(canvas)
-        }), index
-      )      
-    }
+    $(document).ready(function() {
+      $('.spin').css('transform-origin', "50%");
+
+      for (let index = 0; index < duration; index+=fps) {
+        rotationDegree += 360 * fps / duration;
+        console.log(rotationDegree);
+        $('.spin').css('transform', `rotate(${rotationDegree}deg)`);
+        setTimeout(
+          html2canvas(document.querySelector("#source")).then(canvas => {
+            document.querySelector("#result").appendChild(canvas)
+          }), 500
+        )      
+      }
+    })
+
 </script>
 </body>
 
